@@ -1,0 +1,16 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+*.aux
+*.xdv
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.rel
+*Notes.bib
+*.fls
+*.fdb_latexmk
+*-diff*
+*-oldtmp-*
+lecture*.pdf

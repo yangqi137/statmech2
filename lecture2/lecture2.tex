@@ -1,0 +1,35 @@
+% !TEX engine = xelatex
+
+\documentclass[12pt,aps,pra,notitlepage]{revtex4-1}
+\usepackage{amsmath,amssymb}
+\usepackage{xeCJK}
+\setCJKmainfont{STSong}
+\begin{document}
+
+\title{第二周：正则系综和巨正则系综}
+\maketitle
+
+\section{正则系综}
+\label{sec:canonical}
+
+上一节介绍的微正则系综适用于研究一个已知能量$E$的系统。
+我们一般希望研究一个已知温度$T$，而不是一个已知能量的系统，因为一个热力学系统的能量很难直接测量。
+为此，我们引入正则系综。
+正则系综的温度恒定，而其能量则在涨落。
+为了保持它的温度恒定，我们假设该系统和一个无穷大的温度为$T$的热库保持接触。
+我们假设该热库（的热容）为无穷大，从而使得它在和系统发生能量交换的同时温度仍保持不变。
+系统1与热库2一起构成一个能量守恒的孤立系统，因而可以用一个微正则系综描述：
+\[\rho = \text{Const}.\]
+这个微正则系综总能量为系统与热库能量之和：
+\[E = E_1 + E_2.\]
+对于系统$A_1$的某一个能量为$E(x)$的状态$x$，
+\[\rho(x) = \frac1{\Omega(E)}\Omega^\prime(E-E(x)).\]
+
+\section{正则系综和微正则系综的比较}
+
+\section{巨正则系综}
+\label{sec:grand}
+
+\section{例子：无相互作用经典气体}
+\section{例子：有相互作用经典气体--集团展开}
+\end{document}
