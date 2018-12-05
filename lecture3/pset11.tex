@@ -1,0 +1,39 @@
+% !TEX engine = xelatex
+
+\documentclass[12pt,aps,pra,notitlepage]{revtex4-1}
+\usepackage{amsmath,amssymb}
+\usepackage{xeCJK}
+\setCJKmainfont{STSong}
+\DeclareMathOperator{\tr}{tr}
+\begin{document}
+
+\title{第十一次作业}
+\maketitle
+\begin{center}
+  12月10号截止。
+\end{center}
+\begin{enumerate}
+  \item Von Neumann (冯诺依曼)熵\\
+  对于一个密度矩阵$\hat\rho$，冯诺依曼熵的定义为
+  \[\tilde S = -\tr(\hat\rho\ln\hat\rho).\]
+  \begin{enumerate}
+    \item 证明对于一个热密度矩阵$\hat\rho=\frac1Ze^{-\beta\hat H}$，其冯诺依曼熵为
+    \[\tilde S =-\sum_nf_n\ln f_n,\]
+    其中$f_n=\frac1Ze^{-\beta E_n}$为第$n$个能级的占据概率。
+    \item 利用热力学关系$S=-\frac{\partial F}{\partial T}$，计算热力学熵$S$, 并证明如下关系：
+    \[S = k_B\tilde S.\]
+  \end{enumerate}
+  \item 1维经典伊辛模型和单自旋的量子统计问题\\
+  在课上，我们证明了一个自旋的量子统计问题和一个1维经典伊辛模型的关系，这里量子自旋的哈密顿量为
+  \[H=-h_x\sigma^x,\]
+  1维经典伊辛模型的能量为
+  \[E=-J\sum_i(\sigma_i\sigma_{i+1}-1),\]
+  而这两个模型的对应由如下关系给出，
+  \[e^{-2J} = h_x\Delta\tau = \frac{\beta h_x}M.\]
+  这里量子模型的温度为$\beta$, 经典模型的温度为1。
+
+  利用教材13.2节中转移矩阵的方法计算1维经典伊辛模型的配分函数。直接对角化量子哈密顿量并计算有限温度下该模型的配分函数。证明在$M\rightarrow\infty$的极限下，经典和量子模型给出的配分函数是一致的。
+
+  提示：在$M\gg1$的时候，不能如教材13.2节中那样忽略转移矩阵较小的本征值。
+\end{enumerate}
+\end{document}

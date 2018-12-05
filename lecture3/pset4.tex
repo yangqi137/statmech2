@@ -1,0 +1,35 @@
+% !TEX engine = xelatex
+
+\documentclass[12pt,aps,pra,notitlepage]{revtex4-1}
+\usepackage{amsmath,amssymb}
+\usepackage{xeCJK}
+\setCJKmainfont{STSong}
+\begin{document}
+
+\title{第四次作业}
+\maketitle
+\begin{center}
+  10月22号截止。
+\end{center}
+\begin{enumerate}
+  \item Sachdev's Lecture Note, Problem 3.6\\
+  说明：这里$N$分量的标量场指的是如下模型：
+  \[Z=\int\prod_{\alpha}\mathcal Dy_{\alpha}
+  \exp\left\{-\frac12\sum_{ij\alpha}\phi_{i\alpha}A_{ij}\phi_{j\alpha}
+  -\frac u{4}\sum_i\sum_{\alpha\beta}\phi_{i\alpha}^2\phi_{i\beta}^2
+  \right\}.\]
+  其中相互作用系数习惯上写成$\frac u4$而不是$\frac u{4!}$，因为后面的项在$N$分量的时候只有$2!\times2!=4$重对称性。
+  \item $\phi^3$场论。
+
+  我们考虑如下的场论，
+  \[Z(g)=\int\mathcal D\phi \exp\left(
+  -\frac12\sum_{ij}\phi_iA_ij\phi_j-\frac g{3!}\sum_i\phi_i^3\right).\]
+  用微扰论及费曼图计算如下物理量：
+  \begin{enumerate}
+    \item 计算$\langle\phi_i\rangle$最低阶非零贡献的结果。为什么在这个模型中$\langle\phi_i\rangle\neq0$，而在$\phi^4$模型中$\langle\phi_i\rangle=0$？
+    \item 计算$\langle\phi_i\phi_j\rangle$到$g^2$阶的结果。注意$\langle\phi_i\rangle\neq0$。
+  \end{enumerate}
+  \item PB 16.9\\
+  提示：注意Finite Size Effect：数值模拟中我们研究的是有限大小体系，而理论计算中得到的是热力学极限($L\rightarrow\infty$)下的结果。如何比较这两个结果？建议在数值模拟中选取$L=10\sim1000$。
+\end{enumerate}
+\end{document}

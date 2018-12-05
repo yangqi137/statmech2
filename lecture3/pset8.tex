@@ -1,0 +1,34 @@
+% !TEX engine = xelatex
+
+\documentclass[12pt,aps,pra,notitlepage]{revtex4-1}
+\usepackage{amsmath,amssymb}
+\usepackage{xeCJK}
+\setCJKmainfont{STSong}
+\DeclareMathOperator{\tr}{tr}
+\begin{document}
+
+\title{第八次作业}
+\maketitle
+\begin{center}
+  11月19号截止。
+\end{center}
+\begin{enumerate}
+  \item $O(N)$模型的Wolff更新算法：U. Wolff, Phys. Rev. Lett. \textbf{62}, 361 (1989).\\
+  考虑一个$O(N)$模型：
+  \[Z=\int\prod_i\mathcal{D}\vec{\sigma}_i\delta(\vec\sigma_i^2-1)\exp\left[\beta\sum_{\langle ij\rangle}\vec\sigma_i\cdot\vec\sigma_j\right].\]
+  考虑如下的Wolff算法：
+  \begin{enumerate}
+    \item 随机选择一个初始点$i_0$。
+    \item 随机选择一个$N$维平面，用它的法向单位矢量$\vec r$表示。我们可以定义相对这个平面的镜像反射操作$\vec\sigma\rightarrow R(\vec r)\vec\sigma$：
+    \[R(\vec r)\vec\sigma = \vec\sigma - 2(\vec\sigma\cdot\vec r)\vec r.\]
+    用这个操作把$\vec\sigma_i$变成$R(\vec r)\vec\sigma_i$。
+    \item 我们以$i_0$作为初始点开始构造一个集团：从一个集团里的点$i$出发，把它的一个近邻$j$加入集团的概率为
+    \[P(\vec\sigma_i,\vec\sigma_j) = 1-\exp\left\{\min\left[0, \beta\vec\sigma_i\cdot\vec\sigma_j-\beta\vec\sigma_i\cdot R(\vec r)\vec\sigma_j\right]\right\}.\]
+    如果$j$被加入集团，把$\vec\sigma_j$变成$R(\vec r)\vec\sigma_j$。
+    \item 重复上述过程，直到完成构造一个集团。
+  \end{enumerate}
+  证明上述算法满足细致平衡原理。
+
+  \item 利用课上介绍的转移矩阵实空间重整化的做法，解决教材上习题14.1。
+\end{enumerate}
+\end{document}
